@@ -1,0 +1,395 @@
+/* media querry 600px */
+@media screen and (max-width:600px) {
+  .about-container{
+    flex-direction: column;
+    margin-left: 30px;
+    
+  }
+  .inf0{
+    font-weight: 20px;
+
+  }
+  .container{
+    flex-direction: column;
+    justify-content: center;
+    
+   
+  }
+
+   .intro{
+    text-align: center;
+    
+  } 
+   .para p{ 
+    font-size: 10px;
+  } 
+
+  .abouthead{
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .con-container{
+    flex-direction: column;
+    
+  }
+  .formarea{
+    margin-top: 20px;
+    
+  }
+  .formtype{
+    flex-direction: column;
+    
+  }
+  .form{
+    padding-top: 20px;
+  }
+  input{
+    width: 400px;
+  }
+ .img{
+  
+text-align: center;
+ }
+  .heading1{
+    margin-top: 25px;
+  }
+} 
+
+/* media querry 768px */
+@media only screen and (min-width:601px) and (max-width:768px) {
+  .container{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .img{
+    text-align: center;
+  }
+  .heading1{
+    margin-top: 10%;
+  }
+  .con-container{
+    flex-direction: column;
+    padding: 0 50px;
+    
+  }
+  .con-info{
+    flex-direction: row;
+   
+  }
+  .formarea{
+    margin-top: 40px;
+  }
+.intro{
+  text-align: center;
+}
+  
+}
+
+Body{
+  background-color: rgb(14, 13, 13);
+  color: white;
+
+}
+
+
+/* HOME STYLING */
+.img{
+  width: 50%;
+}
+ img{
+  border: 7px solid rgb(240, 22, 22);
+  border-radius:40% ;
+  width: 70%;
+  object-fit: cover;
+  object-position: center;
+ 
+}
+
+.heading1{
+  font-size: 30px;
+}
+
+.container{
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+
+
+/* ABOUT STYLING */
+.abouthead{
+  text-align: center;
+  font-size: 6vw;
+  font-weight: bolder;
+ 
+}
+a{
+  text-decoration: none;
+  color: aliceblue;
+}
+.personalinfo{
+  text-align: center;
+  padding-top: 40px;
+}
+.about-container{
+  font-size: 20px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around;
+
+  
+  
+}
+.inf0{
+  color:rgb(88, 88, 88);
+  font-weight: bold;
+}
+.info2{
+  color: rgb(209, 209, 209);
+  font-weight: lighter;
+}
+
+.resume{
+  border: 1px solid red;
+  width: 180px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: red;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.resume button{
+  background-color: red;
+  width: 180px;
+  height: 50px;
+  border-radius: 30px;
+ 
+  border: 0px;
+  text-align: center;
+  
+  color: white;
+ 
+}
+.resume button:hover{
+  transform: scale(0.9);
+  transition: .5s;
+}
+
+.skills{
+  border-top: 0px  solid white;
+  margin-top: 40px;
+  font-size: 20px;
+  text-align: center;
+}
+.progress-bar-container{
+  display: flex;
+justify-content:center ;
+
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 100px;
+  row-gap: 40px;
+ 
+}
+@property --progress-value {
+  syntax: '<integer>';
+  inherits: false;
+  initial-value: 0;
+}
+
+.progress-bar {
+ 
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  
+  /* to center the percentage value */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.progress-bar::before {
+  counter-reset: percentage var(--progress-value);
+  content: counter(percentage) '%';
+}
+
+.html {
+  background: 
+  radial-gradient(closest-side, rgb(14, 13, 13)79%, transparent 80% 100%),
+  conic-gradient(red calc(var(--progress-value) * 1%),white 0);
+}
+#html{
+  animation: html-progress 2s 1 forwards;
+}
+#html::before {
+  animation: html-progress 2s 1 forwards;
+}
+@keyframes html-progress {
+  to { --progress-value: 85; }
+}#css{
+  animation: css-progress 2s 1 forwards;
+}
+#css::before {
+  animation: css-progress 2s 1 forwards;
+}
+@keyframes css-progress {
+  to { --progress-value: 85; }
+}
+#java{
+  animation: java-progress 2s 1 forwards;
+}
+#java::before {
+  animation: java-progress 2s 1 forwards;
+}
+@keyframes java-progress {
+  to { --progress-value: 75; }
+
+}
+#bootstrap{
+  animation: bootstrap-progress 2s 1 forwards;
+}
+#bootstrap::before {
+  animation: bootstrap-progress 2s 1 forwards;
+}
+@keyframes bootstrap-progress {
+  to { --progress-value: 80; }
+
+}
+#react{
+  animation:react-progress 2s 1 forwards;
+}
+#react::before {
+  animation: react-progress 2s 1 forwards;
+}
+@keyframes react-progress {
+  to { --progress-value: 67; }
+}
+#nodeJS{
+  animation:nodeJS-progress 2s 1 forwards;
+}
+#nodeJS::before {
+  animation:nodeJS-progress 2s 1 forwards;
+}
+@keyframes nodeJS-progress {
+  to { --progress-value: 62; }
+}
+#mongo{
+  animation:mongo-progress 2s 1 forwards;
+}
+#mongo::before {
+  animation: mongo-progress 2s 1 forwards;
+}
+@keyframes mongo-progress {
+  to { --progress-value: 61; }
+}
+.skills {
+  
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+
+progress {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.progress-bar-container p{
+  text-align: center;
+  
+}
+
+/* 
+CONTACT CSS */
+.con-container{
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 50px;
+  margin: 60px 20px;
+  
+}
+.con-info{
+  display: flex;
+  flex-direction: column; 
+}
+
+
+input{
+  height: 40px;
+  width: 97%;
+  border-radius: 30px;
+  background-color: rgb(41, 40, 40);
+  color: white;
+  outline: none;
+  border: 0;
+  padding: 0 10px;
+}
+input:hover{
+  border:1px solid red;
+}
+
+.formtype{
+  display: flex;
+  justify-content: center;
+ 
+}
+
+textarea{
+  background-color:  rgb(41, 40, 40);
+  width: 98%;
+  color: white;
+  outline: none;
+  border:0;
+  outline: none;
+  border-radius: 30px;
+  padding: 15px 10px;
+}
+textarea:hover {
+  border: 1px solid red;
+}
+.con-para{
+  margin-top: 20px;
+}
+.mail{
+  display: flex;
+  
+}
+.mailinfo{
+  margin-left: 20px;
+}
+.fa-envelope{
+  color: rgb(247, 19, 19);
+}
+.icon{
+  display: flex;
+  justify-content: space-around;
+  outline: none;
+  border: 1px solid  rgb(14, 13, 13)  ;
+  width: 200px;
+  margin-top: 20px;
+}
+.fa-facebook:hover{
+  color: rgb(247, 19, 19);
+}
+.fa-instagram:hover{
+  color: rgb(247, 19, 19);
+}
+.fa-github:hover{
+  color: rgb(247, 19, 19);
+}
+input[type=submit]{
+  width: 150px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: rgb(247, 19, 19);
+  
+}
